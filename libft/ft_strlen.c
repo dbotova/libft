@@ -1,18 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbotova <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/30 19:37:42 by dbotova           #+#    #+#             */
-/*   Updated: 2016/09/30 19:37:45 by dbotova          ###   ########.fr       */
+/*   Created: 2016/09/22 18:03:11 by dbotova           #+#    #+#             */
+/*   Updated: 2016/09/22 18:19:07 by dbotova          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar(char c)
+size_t	ft_strlen(const char *str)
 {
-	write(1, &c, 1);
+	size_t	size;
+	int		idx;
+
+	size = 0;
+	idx = 0;
+	if (str)
+	{
+		while (str[idx] != '\0')
+		{
+			size++;
+			idx++;
+		}
+	}
+	return (size);
 }

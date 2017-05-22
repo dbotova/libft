@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_power.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbotova <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/26 16:43:50 by dbotova           #+#    #+#             */
-/*   Updated: 2016/09/26 16:43:52 by dbotova          ###   ########.fr       */
+/*   Created: 2016/11/25 13:38:19 by dbotova           #+#    #+#             */
+/*   Updated: 2016/11/25 13:38:20 by dbotova          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *string)
+unsigned int	ft_power(int n, int pow)
 {
-	int		len;
-	char	*result;
+	int count;
+	int nb;
 
-	len = 0;
-	len = ft_strlen(string);
-	result = (char *)malloc(sizeof(char) * (len + 1));
-	if (result)
-		result = ft_strcpy(result, string);
-	return (result);
+	count = 1;
+	nb = n;
+	if (pow == 0)
+		return (1);
+	while (count < pow)
+	{
+		nb = nb * n;
+		count++;
+	}
+	return (nb);
 }

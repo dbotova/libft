@@ -10,6 +10,12 @@
 #                                                                              #
 # **************************************************************************** #
 
+PRINTF = ./ft_printf
+ARRAY = ./array_wrap
+PPATH = ./$(PRINTF)/print
+RPATH = ./$(PRINTF)/read
+UPATH = ./$(PRINTF)/util
+
 SRC =	libft.h																\
 		ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c			\
 		ft_isdigit.c ft_isprint.c ft_ispunct.c ft_isspace.c ft_itoa.c		\
@@ -24,7 +30,29 @@ SRC =	libft.h																\
 		ft_strncpy.c ft_strnequ.c ft_strnew.c ft_strnstr.c ft_strrchr.c		\
 		ft_strsplit.c ft_strstr.c ft_strsub.c ft_strtrim.c ft_tolower.c		\
 		ft_toupper.c ft_strlowcase.c ft_strupcase.c ft_list_last.c 			\
-		get_next_line.c
+		get_next_line.c ft_ftoa_precision.c ft_getnum.c ft_ltoa_base.c 		\
+		ft_nbrsize.c ft_power.c ft_putnstr.c ft_putwchar.c ft_putwstr.c 	\
+		ft_ultoa_base.c ft_wcharlen.c ft_wstrlen.c ft_num_separete.c 		\
+		$(PRINTF)/ft_printf.c 												\
+		$(PPATH)/ft_cchar_print.c $(PPATH)/ft_char_print.c 					\
+		$(PPATH)/ft_chex_print.c $(PPATH)/ft_cint_print.c 					\
+		$(PPATH)/ft_cocta_print.c $(PPATH)/ft_cstr_print.c 					\
+		$(PPATH)/ft_cunsigned_print.c $(PPATH)/ft_float_print.c 			\
+		$(PPATH)/ft_hex_print.c $(PPATH)/ft_int_print.c 					\
+		$(PPATH)/ft_octa_print.c $(PPATH)/ft_pointer_print.c 				\
+		$(PPATH)/ft_print.c $(PPATH)/ft_str_print.c  						\
+		$(PPATH)/ft_unsigned_print.c $(PPATH)/ft_undef_print.c				\
+		$(RPATH)/ft_char_read.c $(RPATH)/ft_float_read.c  					\
+		$(RPATH)/ft_num_read.c $(RPATH)/ft_pointer_read.c 					\
+		$(RPATH)/ft_undef_read.c $(RPATH)/ft_wchar_read.c 					\
+		$(RPATH)/ft_wstr_read.c $(RPATH)/ft_hex_read.c						\
+		$(UPATH)/ft_create_jump_table.c $(UPATH)/ft_getflags.c 				\
+		$(UPATH)/ft_newflagslst.c $(RPATH)/ft_str_read.c ft_itoa_base.c 	\
+		get_next_word.c get_next_line.c ft_hash.c $(ARRAY)/add_element.c 	\
+		$(ARRAY)/copy_array.c $(ARRAY)/delete_element.c 					\
+		$(ARRAY)/edit_element.c $(ARRAY)/find_element.c 					\
+		$(ARRAY)/free_array.c $(ARRAY)/init_array.c 						\
+		$(ARRAY)/print_elements.c $(ARRAY)/realloc_array.c
 
 OBJ = 	ft_atoi.o ft_bzero.o ft_isalnum.o ft_isalpha.o ft_isascii.o			\
 		ft_isdigit.o ft_isprint.o ft_ispunct.o ft_isspace.o ft_itoa.o		\
@@ -39,7 +67,23 @@ OBJ = 	ft_atoi.o ft_bzero.o ft_isalnum.o ft_isalpha.o ft_isascii.o			\
 		ft_strncpy.o ft_strnequ.o ft_strnew.o ft_strnstr.o ft_strrchr.o		\
 		ft_strsplit.o ft_strstr.o ft_strsub.o ft_strtrim.o ft_tolower.o		\
 		ft_toupper.o ft_strlowcase.o ft_strupcase.o ft_list_last.o 			\
-		get_next_line.o
+		get_next_line.o ft_ftoa_precision.o ft_getnum.o ft_ltoa_base.o 		\
+		ft_nbrsize.o ft_power.o ft_putnstr.o ft_putwchar.o ft_putwstr.o 	\
+		ft_ultoa_base.o ft_wcharlen.o ft_wstrlen.o ft_num_separete.o 		\
+		ft_printf.o	ft_cchar_print.o ft_char_print.o ft_chex_print.o 		\
+		ft_cint_print.o ft_cocta_print.o ft_cstr_print.o   					\
+		ft_float_print.o ft_hex_print.o ft_int_print.o ft_octa_print.o 		\
+		ft_pointer_print.o ft_print.o ft_str_print.o ft_undef_print.o 		\
+		ft_unsigned_print.o ft_char_read.o ft_float_read.o ft_hex_read.o 	\
+		ft_num_read.o ft_pointer_read.o ft_str_read.o ft_undef_read.o 		\
+		ft_wchar_read.o ft_wstr_read.o ft_ftoa_precision.o ft_getnum.o 		\
+		ft_ltoa_base.o ft_cunsigned_print.o ft_nbrsize.o ft_power.o 		\
+		ft_putnstr.o ft_putwchar.o ft_putwstr.o ft_ultoa_base.o 			\
+		ft_wcharlen.o ft_wstrlen.o ft_create_jump_table.o ft_getflags.o 	\
+		ft_newflagslst.o ft_num_separete.o ft_itoa_base.o get_next_word.o 	\
+		ft_hash.o add_element.o copy_array.o delete_element.o 				\
+		edit_element.o find_element.o free_array.o init_array.o 			\
+		print_elements.o realloc_array.o
 
 NAME = libft.a
 

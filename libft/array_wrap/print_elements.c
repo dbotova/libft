@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   print_elements.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbotova <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/22 18:03:11 by dbotova           #+#    #+#             */
-/*   Updated: 2016/09/22 18:19:07 by dbotova          ###   ########.fr       */
+/*   Created: 2017/05/21 17:36:21 by dbotova           #+#    #+#             */
+/*   Updated: 2017/05/21 17:36:22 by dbotova          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "array_wrap.h"
 
-size_t	ft_strlen(const char *str)
+void		print_elements(t_array_wrap *array)
 {
-	size_t	size;
-	int		idx;
+	size_t	i;
 
-	size = 0;
-	idx = 0;
-	while (str[idx] != '\0')
+	i = 0;
+	while (array && i < array->used)
 	{
-		size++;
-		idx++;
+		if (array->data[i][0] != 0)
+			ft_printf(array->data[i]);
+		i++;
 	}
-	return (size);
 }
